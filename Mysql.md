@@ -134,3 +134,102 @@ net start mysql
 
 
 
+## 创建数据库
+
+图形化界面
+
+![image-20200603073717024](C:\Users\AVE\AppData\Roaming\Typora\typora-user-images\image-20200603073717024.png)
+
+每一个sqlyog的执行操作就是对应的一个sql可以在历史记录上看到
+
+
+
+## 连接数据库
+
+命令行链接
+
+连接数据库：mysql -u root -p123456
+
+``` mysql
+update mysql.user set authentication_string=password('812090') where user='root' and Host = 'localhost';
+--修改用户密码
+---------------------------------------------------
+
+所有的语句都以；结尾
+show databases;   #查看所有的数据库
+
+use school;   #切换数据库
+
+show tables;   #显示数据库中的所有表
+
+describe student;   #显示表中的所有信息
+
+ create database westos;  #创建数据库
+ 
+ exit；    #推出连接
+ 
+ --单行注释（有的地方是#）
+ 
+ /*
+ sql的多行注释
+ */
+
+
+```
+
+
+
+
+
+**sql主演有四中语言**  CRUD(增删改查，基本业务)      CV（复制黏贴）     API（调用API）   
+
+**DDL,数据库定义语言**
+
+**DML,数据库操作语言**
+
+**DQL,数据库查询语言**
+
+**DCL，数据库控制语言**
+
+
+
+
+
+# 操作数据库
+
+操作数据库        操作数据表   操作数据库表的数据
+
+Mysql数据库语句不区分大小写
+
+## 2.1操作数据库
+
+1. 创建数据库
+
+   ```mysql  
+   CREATE DATABASE [IF EXISTS] westos1;
+   ```
+
+2. 删除数据库
+
+   ```mysql
+   DROP DATABASE [IF EXISTS] westos1; 
+   ```
+
+3. 使用数据库
+
+   ```mysql
+   USE `school`  -- 若果表名或者特殊字符就需要``
+   ```
+
+4. 查看数据库
+
+``` sql
+SHOW DATABASES  -- 查看所有的数据库
+```
+
+
+
+
+
+
+
